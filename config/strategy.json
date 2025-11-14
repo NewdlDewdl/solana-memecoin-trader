@@ -1,0 +1,42 @@
+{
+  "strategy": {
+    "name": "Conservative Memecoin",
+    "description": "Conservative approach with strong safety checks and moderate risk",
+    "riskProfile": "moderate"
+  },
+  "entry": {
+    "minSafetyScore": 40,
+    "minLiquidity": 5,
+    "minHolders": 50,
+    "maxDevHolding": 0.05,
+    "requireMintAuthorityRevoked": false,
+    "requireFreezeAuthorityRevoked": false,
+    "minSocialScore": 30
+  },
+  "exit": {
+    "profitTarget": 1.5,
+    "stopLoss": 0.3,
+    "trailingStop": true,
+    "trailingStopDistance": 0.15,
+    "maxHoldTimeMs": 1800000,
+    "scaleOutEnabled": true
+  },
+  "risk": {
+    "maxPositionPerToken": 0.08,
+    "maxConcurrentPositions": 3,
+    "riskPerTrade": 0.015,
+    "maxPortfolioHeat": 8
+  },
+  "filters": {
+    "minTokenAge": 3600,
+    "maxTopHolderPercentage": 0.15,
+    "minLiquidityLockDays": 30,
+    "blacklistedTokens": []
+  },
+  "advanced": {
+    "useMLPrediction": false,
+    "useSentimentAnalysis": true,
+    "useWhaleTracking": true,
+    "copyTradingEnabled": false
+  }
+}

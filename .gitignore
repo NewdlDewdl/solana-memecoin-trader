@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.backup*
+.env-*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Data
+data/
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# Sensitive files
+*.key
+*.pem
+credentials/
+.credentials/
+
+# Trading data - contains real trade history
+paper-trades.json
+paper-trades-*.json
+*-backup-*.json
+*.db
+
+# Analysis reports (optional)
+*-analysis*.txt
+*-report.txt
+phase*.txt
+
+# Test coverage
+coverage/
+.nyc_output/

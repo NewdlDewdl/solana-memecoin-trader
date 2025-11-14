@@ -1,0 +1,71 @@
+{
+  "bot": {
+    "name": "Solana Memecoin Trader",
+    "version": "1.0.0",
+    "mode": "production"
+  },
+  "solana": {
+    "commitment": "confirmed",
+    "confirmTransactionInitialTimeout": 60000
+  },
+  "wallet": {
+    "maxPositionPerWallet": 0.5,
+    "parallelExecution": true,
+    "distributePositions": true
+  },
+  "risk": {
+    "maxPositionPerToken": 0.1,
+    "maxTotalExposureSol": 1.0,
+    "maxConcurrentPositions": 5,
+    "minPositionSize": 0.01,
+    "riskPerTrade": 0.02,
+    "maxPortfolioHeat": 10,
+    "minRiskReward": 2.0,
+    "kellyFraction": 0.25
+  },
+  "entry": {
+    "minLiquidity": 10,
+    "minHolders": 50,
+    "maxDevHolding": 0.05,
+    "requireVerifiedContract": true,
+    "socialVolumeThreshold": 100,
+    "minSafetyScore": 60,
+    "minEntryScore": 60,
+    "slippageBps": 300,
+    "strategy": "market",
+    "planExpiryMs": 300000
+  },
+  "exit": {
+    "profitTarget": 2.0,
+    "stopLoss": 0.5,
+    "trailingStop": true,
+    "trailingStopDistance": 0.2,
+    "slippageBps": 500,
+    "maxHoldTimeMs": 3600000,
+    "scaleOutStages": [
+      { "profit": 0.5, "exit": 0.25 },
+      { "profit": 1.0, "exit": 0.25 },
+      { "profit": 2.0, "exit": 0.5 }
+    ]
+  },
+  "execution": {
+    "defaultPriorityFee": 10000,
+    "maxPriorityFeeLamports": 100000,
+    "dynamicPriorityFee": true,
+    "useMevProtection": false,
+    "jitoTipLamports": 10000,
+    "maxRetries": 3,
+    "retryDelay": 2000
+  },
+  "monitoring": {
+    "priceUpdateIntervalMs": 5000,
+    "positionCheckIntervalMs": 10000,
+    "tokenDiscoveryEnabled": true,
+    "stopLossMonitoringEnabled": true
+  },
+  "logging": {
+    "level": "info",
+    "maxFileSize": 10485760,
+    "maxFiles": 5
+  }
+}
